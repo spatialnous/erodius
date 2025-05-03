@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Petros Koutsolampros
+#
+# SPDX-License-Identifier: GPL-3.0-only
+
+[submodule "src/salalib"]
+	path = src/salalib
+	url = https://github.com/spatialnous/salalib

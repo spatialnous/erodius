@@ -1,0 +1,16 @@
+version = 1
+SPDX-PackageName = "erodius"
+SPDX-PackageSupplier = "Petros Koutsolampros <py-devel@pklampros.net>"
+SPDX-PackageDownloadLocation = "https://github.com/spatialnous/erodius"
+
+[[annotations]]
+path = [".gitignore", ".gitmodules", "README.md", "REUSE.toml"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Petros Koutsolampros <py-devel@pklampros.net>"
+SPDX-License-Identifier = "GPL-3.0-only"
+
+[[annotations]]
+path = "tests/data/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Public domain"
+SPDX-License-Identifier = "CC0-1.0"
