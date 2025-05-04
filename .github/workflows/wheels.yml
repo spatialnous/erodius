@@ -59,6 +59,7 @@ jobs:
 
     - uses: pypa/cibuildwheel@v2.23
       env:
+        MACOSX_DEPLOYMENT_TARGET: 10.13
         CIBW_ENABLE: cpython-prerelease
         CIBW_ARCHS_WINDOWS: auto ARM64
 
