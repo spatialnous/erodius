@@ -32,6 +32,9 @@ target_link_libraries(_core PRIVATE pybind11::headers)
 # This is passing in the version as a define just as an example
 target_compile_definitions(_core PRIVATE VERSION_INFO=${PROJECT_VERSION})
 
+# Allows enabling M_PI for MSVC
+add_compile_definitions(_USE_MATH_DEFINES)
+
 add_subdirectory(src/salalib)
 
 target_link_libraries(_core PRIVATE salalib)
