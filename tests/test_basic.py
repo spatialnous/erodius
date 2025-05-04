@@ -12,8 +12,4 @@ def test_version():
 
 def test_readMetaGraph():
     mgd = m.readMetaGraph("./tests/data/barnsburySmall.graph", False)
-    assert mgd[0][0].get_name() == "/tmp/Rtmp3CVtFg/file408014dde327b.tsv"
-
-# print(m.readMetaGraph("/home/petros/Projects/Current/2025/erodius/code/erodius/tests/data/barnsburySmall.graph", True))
-dt = m.readMetaGraph("./tests/data/barnsburySmall.graph", True)
-print(dt[0][0].get_name())
+    assert mgd['shapeMaps'][0]['map'].get_name() == "/tmp/Rtmp3CVtFg/file408014dde327b.tsv"
