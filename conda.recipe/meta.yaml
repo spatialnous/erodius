@@ -43,5 +43,5 @@ test:
     - pytest tests
 
 about:
-  summary: An example project built with pybind11 and scikit-build.
-  license_file: LICENSE
+  summary: A library for spatial network analysis
+  license_file: LICENSES/

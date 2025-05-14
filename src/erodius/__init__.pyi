@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 from typing import Tuple, List
-import erodius  # assuming your module is named `example`
+import erodius
 
 """
 Pybind11 erodius plugin
