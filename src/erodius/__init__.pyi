@@ -17,7 +17,7 @@ Pybind11 erodius plugin
     readMetaGraph
 """
 
-def readMetaGraph(fileName: str, verbose: bool) -> Tuple:[List[erodius.ShapeMap], List[erodius.ShapeGraph], List[erodius.PointMap]]::
+def readMetaGraph(fileName: str, verbose: bool) -> Tuple:[List[erodius.ShapeMap], List[erodius.ShapeGraph], List[erodius.LatticeMap]]::
     """
     Add two numbers
 

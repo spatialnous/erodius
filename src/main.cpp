@@ -4,7 +4,7 @@
 
 #include "salalib/genlib/region4f.hpp"
 #include "salalib/metagraphreadwrite.hpp"
-#include "salalib/pointmap.hpp"
+#include "salalib/latticemap.hpp"
 #include "salalib/shapegraph.hpp"
 
 #include <pybind11/pybind11.h>
@@ -30,7 +30,7 @@ py::dict readMetaGraph(std::string fileName, bool verbose) {
 
   std::vector<py::dict> shapeMaps;
   std::vector<py::dict> shapeGraphs;
-  std::vector<py::dict> pointMaps;
+  std::vector<py::dict> latticeMaps;
 
   for (auto &drawingFile : mgd.drawingFiles) {
     if (verbose) {
@@ -83,18 +83,18 @@ py::dict readMetaGraph(std::string fileName, bool verbose) {
     mdata["map"] = std::move(*it);
     shapeGraphs.emplace_back(std::move(mdata));
   }
-  for (auto it = mgd.pointMaps.begin(); it != mgd.pointMaps.end(); ++it) {
+  for (auto it = mgd.latticeMaps.begin(); it != mgd.latticeMaps.end(); ++it) {
     if (verbose) {
       std::cout << " - dataMap name: " << it->getName() << std::endl;
     }
     py::dict mdata;
     mdata["map"] = std::move(*it);
-    pointMaps.emplace_back(std::move(mdata));
+    latticeMaps.emplace_back(std::move(mdata));
   }
   py::dict maps;
   maps["shapeMaps"] = std::move(shapeMaps);
   maps["shapeGraphs"] = std::move(shapeGraphs);
-  maps["pointMaps"] = std::move(pointMaps);
+  maps["latticeMaps"] = std::move(latticeMaps);
 
   return maps;
 }
@@ -130,7 +130,7 @@ PYBIND11_MODULE(_core, m) {
       .def(py::init<Point2f, Point2f>()) //
       ;
 
-  py::class_<PointMap>(m, "PointMap")                 //
+  py::class_<LatticeMap>(m, "LatticeMap")                 //
       .def(py::init<Region4f, const std::string &>()) //
       ;
 
