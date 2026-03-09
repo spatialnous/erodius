@@ -28,10 +28,10 @@ jobs:
       with:
         python-version: "3.12"
 
-    - uses: pypa/cibuildwheel@v3.3
+    - uses: pypa/cibuildwheel@v3.4
       env:
         CIBW_PLATFORM: pyodide
 
-    - uses: actions/upload-artifact@v6
+    - uses: actions/upload-artifact@v7
       with:
         path: dist/*.whl
