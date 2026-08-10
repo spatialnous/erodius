@@ -57,7 +57,7 @@ jobs:
 
     - uses: astral-sh/setup-uv@v7
 
-    - uses: pypa/cibuildwheel@v4.1
+    - uses: pypa/cibuildwheel@v4.2
       env:
         MACOSX_DEPLOYMENT_TARGET: 10.13
         CIBW_ENABLE: cpython-prerelease
