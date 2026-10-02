@@ -19,19 +19,19 @@ jobs:
     name: Pyodide
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v7
       with:
         submodules: true
         fetch-depth: 0
 
-    - uses: actions/setup-python@v6
+    - uses: actions/setup-python@v7
       with:
         python-version: "3.12"
 
-    - uses: pypa/cibuildwheel@v3.1
+    - uses: pypa/cibuildwheel@v4.2
       env:
         CIBW_PLATFORM: pyodide
 
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v7
       with:
         path: dist/*.whl
