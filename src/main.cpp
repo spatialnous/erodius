@@ -99,7 +99,7 @@ py::dict readMetaGraph(std::string fileName, bool verbose) {
   return maps;
 }
 
-PYBIND11_MODULE(_core, m) {
+PYBIND11_MODULE(_core, m, py::mod_gil_not_used()) {
   m.doc() = R"pbdoc(
         erodius: Spatial Network Analysis
         -----------------------

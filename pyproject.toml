@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 [build-system]
-requires = ["scikit-build-core>=0.10", "pybind11"]
+requires = ["scikit-build-core>=0.10", "pybind11>=2.13"]
 build-backend = "scikit_build_core.build"
 
 
