@@ -38,7 +38,9 @@ jobs:
           channels: conda-forge
 
       - name: Prepare
-        run: conda install conda-build conda-verify pytest
+        run: |
+          conda install -n base -y conda-build
+          conda install -y pytest
 
       - name: Build
         run: conda build conda.recipe
