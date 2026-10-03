@@ -46,7 +46,9 @@ jobs:
         run: conda build conda.recipe
 
       - name: Install
-        run: conda install -c ${CONDA_PREFIX}/conda-bld/ erodius
+        run: |
+          PKG=$(conda build --output conda.recipe)
+          conda install -y "$PKG"
 
       - name: Test
         run: pytest tests
