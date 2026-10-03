@@ -12,8 +12,8 @@ source:
 build:
   number: 0
   script:
-    - unset CMAKE_GENERATOR && {{ PYTHON }} -m pip install . -vv  # [not win]
-    - {{ PYTHON }} -m pip install . -vv  # [win]
+    - unset CMAKE_GENERATOR && {{ PYTHON }} -m pip install . -vv   # [not win]
+    - set "CMAKE_ARGS=" && {{ PYTHON }} -m pip install . -vv       # [win]
 
 requirements:
   build:
