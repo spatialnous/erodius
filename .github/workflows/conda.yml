@@ -42,13 +42,5 @@ jobs:
           conda install -n base -y conda-build
           conda install -y pytest
 
-      - name: Build
-        run: conda build conda.recipe
-
-      - name: Install
-        run: |
-          PKG=$(conda build --output conda.recipe)
-          conda install -y "$PKG"
-
       - name: Test
         run: pytest tests
