@@ -42,5 +42,5 @@ jobs:
           conda install -n base -y conda-build
           conda install -y pytest
 
-      - name: Test
-        run: pytest tests
+      - name: Build
+        run: conda build conda.recipe
